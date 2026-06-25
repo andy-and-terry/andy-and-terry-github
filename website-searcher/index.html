@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+  </style>
+  <title>Website searcher</title>
+</head>
+<body>
+    <input type="text" id="linkInput" placeholder="repo e.g. websites, or repo/folder e.g. websites/websites/themadbros">
+    <button onclick="redirect()">Go</button>
+
+    <script>
+        function redirect() {
+            const input = document.getElementById("linkInput").value.trim();
+
+            if (input) {
+                window.location.href =
+                    `https://andy-and-terry.github.io/${encodeURIComponent(input)}`;
+            }
+        }
+    </script>
+</body>
